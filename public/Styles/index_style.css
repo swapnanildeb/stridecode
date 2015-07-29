@@ -1,0 +1,543 @@
+﻿/* Home Page*/
+#classsignuptitle{
+	color:#FFFFFF;
+	text-align:center;
+	font-size:28px;
+	margin-top:130px;
+}
+#codeinput{
+	width:395px;
+	height:18px;
+	font-size:14px;
+	padding-top:2px;
+	border-radius:5px;
+	padding-left:5px;
+}
+h2{
+	font-size:20pt;
+	font-weight:900;
+	font-family:"Varela Round";
+	color:#193e8d;
+	position:absolute;
+	right:-40px;
+	top:4px;
+	
+	padding-bottom:0px;
+	padding-top:1px;
+	padding-right:8px;
+	//padding-left:;
+	height:30px;
+	width:22px;
+	border-radius:15px;
+	background-color:#d90558;
+	}
+h5{
+	position:absolute;
+	right:-195px;
+	top:8px;
+	padding-right:10px;
+	font-size:16pt;
+	color:#d50558;
+	font-weight:bold;
+}
+
+
+/** Sign-up Choose */
+#signupquestion{
+	font-size:28px;
+	text-align:center;
+	margin-top:100px;
+	color:#FFFFFF;
+	margin-bottom:20px;
+}
+#typeteacher{
+	background-color:#208AC7;
+	border-radius:20px;
+	height:65px;
+	width:160px;
+	float:left;	
+	font-size:20px;
+	text-align:center;
+	padding-top:35px;
+	color:#FFFFFF;
+	position:relative;
+	left:50%;
+	margin-left:-180px;
+}
+#typestudent{
+	background-color:#208AC7;
+	border-radius:20px;
+	height:65px;
+	width:160px;
+	float:left;	
+	font-size:20px;
+	text-align:center;
+	padding-top:35px;
+	color:#FFFFFF;
+	position:relative;
+	left:50%;
+	margin-left:0px;
+}
+#typejoin{
+	background-color:#208AC7;
+	border-radius:20px;
+	height:65px;
+	width:175px;
+	float:left;	
+	font-size:20px;
+	text-align:center;
+	padding-top:35px;
+	color:#FFFFFF;
+	position:relative;
+	left:50%;
+	margin-left:-180px;
+}
+#typeenter{
+	background-color:#208AC7;
+	border-radius:20px;
+	height:65px;
+	width:175px;
+	float:left;	
+	font-size:20px;
+	text-align:center;
+	padding-top:35px;
+	color:#FFFFFF;
+	position:relative;
+	left:50%;
+	margin-left:0px;
+}
+#typeteacher:hover{
+	background-color:#18699A;
+	cursor:pointer;
+}
+#typestudent:hover{
+	background-color:#18699A;
+	cursor:pointer;
+}
+
+/** Sign-up */
+#signuptitle{
+	color:#FFFFFF;
+	text-align:center;
+	font-size:28px;
+	margin-top:45px;
+}
+#signuptitleteacher{
+	color:#FFFFFF;
+	text-align:center;
+	font-size:28px;
+	margin-top:20px;
+}
+#signup{
+	width:400px;
+	position:relative;
+	left:50%;
+	margin-left:-200px;
+	margin-top:10px;
+}
+#input{
+	width:395px;
+	height:18px;
+	font-size:14px;
+	padding-top:2px;
+	border-radius:5px;
+	padding-left:5px;
+}
+#nameinput{
+	width:190px;
+	height:18px;
+	font-size:14px;
+	padding-top:2px;
+	border-radius:5px;
+	padding-left:5px;
+	float:left;
+}
+.inputtitle{
+	color:white;
+	text-align:left;
+	margin-top:8px;
+	font-family:lato,sans-serif;
+	margin-bottom:1px;
+	margin-left:2px;
+}
+#signupformbutton{
+	width:150px;
+	height:36px;
+	border-radius:8px;
+	border:0px black none;
+	background-color:#208AC7;
+	text-align:center;
+	font-size:16px;
+	margin-top:20px;
+	font-family:lato, sans-serif;
+	color:#FFF;
+	position:relative;
+}
+#signupformbutton:hover{
+	background-color:#18699A;
+	cursor:pointer;
+}
+#second{
+	padding-left:5px;
+}
+/** Index Page - May have overlapping styles */
+body{
+	background-color:#224089;
+	font-family: 'Lato', sans-serif;
+}
+#encompass{
+	position:relative;
+	left:50%;
+	margin-left:-478px;
+	width:956px;
+}
+#container{
+	width:956px;
+	height:390px;
+	border-top: 2px #FFF groove;
+	border-bottom: 2px #FFF groove;
+}
+#centered{
+	width:600px;
+	position:relative;
+	left:50%;
+	margin-left:-300px;
+	color:#FFFFFF;
+	text-align:center;
+}
+#title{
+	height:105px;
+	margin-left:5px;
+	margin-top:5px;
+	margin-bottom:0px;
+}
+#descript{
+	color: #FFFFFF;
+	font-size: 23px;
+	margin-left: 5px;
+	line-height: 28px;
+}
+#twitter{
+	height:65px;
+	float:left;
+	margin-top:10px;
+	position:relative;
+	left:50%;
+	margin-left:-57px;
+}
+#facebook{
+	height:40px;
+	float:left;
+	position:relative;
+	left:50%;
+	margin-left:-5px;
+	margin-top:22px;
+}
+#more{
+	width:150px;
+	height:28px;
+	border-radius:8px;
+	background-color:#208AC7;
+	text-align:center;
+	padding-top:12px;
+	font-size:16px;
+	margin-top:20px;
+	position:relative;
+	left:50%;
+	margin-left:-155px;
+	font-weight:bold;
+	color:#FFF;
+	float:left;
+}
+#signupbutton{
+	width:150px;
+	height:28px;
+	border-radius:8px;
+	background-color:#208AC7;
+	text-align:center;
+	padding-top:12px;
+	font-size:16px;
+	margin-top:20px;
+	position:relative;
+	left:50%;
+	margin-left:5px;
+	font-weight:bold;
+	color:#FFF;
+}
+#more:hover{
+	background-color:#18699A;
+	cursor:pointer;
+}
+#signupbutton:hover{
+	background-color:#18699A;
+	cursor:pointer;
+}
+#nav{
+	height:30px;
+	float:left;
+}
+#nav li{
+	float:left;
+	font-size:16px;
+	padding-top:7px;
+	height:28px;
+	padding-left:10px;
+	padding-right:30px;
+	color:#ffffff;
+	font-weight:bold;
+}
+#nav li a{
+	color:#ffffff;
+}
+#nav li a:hover{
+	color:#C9E4DD;
+	cursor:pointer;
+}
+#header{
+	width:956px;
+	margin-top:113px;
+	margin-bottom:12px;
+}
+#login{
+	width:450px;
+	text-align:right;
+	height:30px;
+	position:relative;
+	padding-top:5px;
+	margin-left:506px;
+}
+.input{
+	padding:4px;
+	border-radius:4px;
+	width:100px;
+	margin-left:5px;
+	margin-right:5px;
+	font-family:lato, sans-serif;
+	color:#C4C4C4;
+	font-weight:bold;
+}
+#button{
+	font-family:lato,sans-serif;
+	font-weight:bolder;
+	border-radius:4px;
+	height:28px;
+	background-color:#305BC0;
+	border: 1px #152957 outset;
+	color:#FFFFFF;
+}
+#button:hover{
+	cursor:pointer;
+	background-color:#254694;
+}
+
+/** About Page Styles */
+h1{
+	color:#FFFFFF;
+	font-size:28px;
+	font-family:'Lato', sans-serif;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.slide{
+	height:390px;
+	width:956px;
+	position:relative;
+}
+
+/** Products Page Styles */
+h3{
+	color:#FFFFFF;
+	text-align:center;
+	font-size:24px;
+	margin-top:10px;
+}
+h4{
+	color:#FFFFFF;
+	font-size:20px;
+	padding-top:10px;
+	padding-left:10px;
+}
+.spectext{
+	padding-left:50px;
+	width:220px;
+	padding-top:5px;
+	color:#E3E8E8;
+	text-align:left;
+}
+.spectextleft{
+	width:220px;
+	padding-top:5px;
+	color:#E3E8E8;
+	text-align:right;
+	margin-left:37px;
+	float:left;
+}
+.productinfo{
+	width:33%;
+	height:320px;
+	float:left;
+}
+.dummyimage{
+	width:70%;
+	height: 200px;
+	background-color:black;
+	position:relative;
+	left:50%;
+	margin-left:-35%;
+	margin-top:10%;
+}
+#center{
+	float:left;
+	padding-top:10px;
+	height:390px;
+	text-align:center;
+}
+.productdescript{
+	color: white;
+	font-size:16px;
+	margin-top:6px;
+	margin-left:40px;
+	text-align:center;
+	width:240px;
+}
+.speccol{
+	width:360px;
+	height:390px;
+	float:left;
+}
+.ready{
+	width:300px;
+	height:80px;
+	margin-left:24px;
+	margin-top:36px;
+	margin-bottom:14px;
+}
+#specstride{
+	width:200px;
+	margin-left:5px;
+}
+#dummyicon{
+	width:30px;
+	height:30px;
+	float:left;
+	background-color:#000000;
+	margin-left:12px;
+	margin-top:7px;
+}
+#tospecs{
+	height:28px;
+	color:white;
+	width:200px;
+	background-color:#208AC7;
+	float:left;
+	position:relative;
+	left:50%;
+	margin-left:-100px;
+	text-align:center;
+	padding-top:12px;
+	font-size:16px;
+	border-radius:10px;
+}
+#tospecs:hover{
+	background-color:#18699A;
+	cursor:pointer;
+}
+#specs{
+	margin-top:-390px;
+}
+#fromspecs{
+	height:28px;
+	color:white;
+	width:200px;
+	background-color:#208AC7;
+	position:relative;
+	left:50%;
+	margin-top:25px;
+	margin-left:-100px;
+	text-align:center;
+	padding-top:12px;
+	font-size:16px;
+	border-radius:10px;
+}
+#fromspecs:hover{
+	background-color:#18699A;
+	cursor:pointer;
+}
+
+
+/** Contact Us Page */
+#contact{
+	width:395px;
+	position:relative;
+	left: 50%;
+	margin-left:-203px;
+}
+#contacttitle{
+	font-size:28px;
+	text-align:center;
+	color:#FFFFFF;
+	margin-top:20px;
+}
+#emailinput{
+	width:395px;
+	height:140px;
+	font-size:14px;
+	padding-top:2px;
+	border-radius:5px;
+	padding-left:5px;
+}
+#emailformbutton{
+	width:150px;
+	height:36px;
+	border-radius:8px;
+	border:0px black none;
+	background-color:#208AC7;
+	text-align:center;
+	font-size:16px;
+	margin-top:10px;
+	font-family:lato, sans-serif;
+	color:#FFF;
+	position:relative;
+}
+
+/** Confirm Message Page */
+#confirmtitle{
+	color:#FFFFFF;
+	text-align:center;
+	font-size:40px;
+	margin-top:110px;
+}
+#confirmmessage{
+	color:white;
+	text-align:center;
+	font-size:20px;
+	margin-top:20px;
+}
+#homebutton{
+	width:150px;
+	height:28px;
+	border-radius:8px;
+	background-color:#208AC7;
+	text-align:center;
+	padding-top:12px;
+	font-size:16px;
+	margin-top:20px;
+	position:relative;
+	left:50%;
+	margin-left:-75px;
+	font-weight:bold;
+	color:#FFF;
+	float:left;
+}
+
+
+/** For JQuery */
+.hidden{
+	display:none;
+}
+.right{
+	text-align:right;
+}
+#radiotitle{
+	padding-left:72px;
+}
