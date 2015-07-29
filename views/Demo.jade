@@ -1,0 +1,124 @@
+doctype html
+html
+	head
+		meta(name='viewport', content='width=device-width')
+
+		link(href='http://fonts.googleapis.com/css?family=Lato:300', rel='stylesheet', type='text/css')
+
+		link(href='http://fonts.googleapis.com/css?family=Exo:100', rel='stylesheet', type='text/css')
+
+		link(href='/Styles/analyticsSheet.css', rel='stylesheet', type='text/css')
+
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+	body
+		.stickylogo
+			h6#black STR_
+			h6#blue IDE
+    
+		nav.sticky
+			h1#title Class 9-1
+
+			#buttons
+				a#Back.headbutton(href='http:\\www.w3schools.com')
+				img#arrow.icon(src='GoBack.svg', alt='Back')
+
+			#hide
+				#backcombo
+					img#speechbubble3.bubble(src='http://res.freestockphotos.biz/pictures/15/15671-illustration-of-a-cartoon-speech-bubble-pv.png')
+					h2#backbubble Back
+
+			div
+				p#az A-Z
+
+			.switch
+				input#cmn-toggle-1.cmn-toggle.cmn-toggle-round(type='checkbox')
+				label(for='cmn-toggle-1')
+
+			div
+				img#tree(src='/akshat/FlowTree.svg', height='30', width='30')
+
+		
+
+		#tabs
+			#alphabetical.alphabet
+				
+			#analytics
+				#cssmenu(style='position:fixed')
+					ul
+						li.active.has-sub
+							a.upper
+								span Categories
+
+					ul
+						li.has-sub
+							a.lower(href='#')
+								span Completed
+
+						li.has-sub
+							a.lower(href='#')
+								span Need Help
+
+						li.has-sub
+							a.lower(href='#')
+								span Off Task
+		
+		script.
+			document.getElementById("hide").style.visibility = "hidden";
+			$("#analytics").fadeOut(1);
+	
+
+		script.
+			$(document).ready(function(){
+			$("#Back").hover(function(){
+			$(this).css("background-color", "#208ac7");
+			$("#arrow").css("background-color", "#208ac7");
+			$(this).css("border-color", "#208ac7");
+			document.getElementById("backcombo").style.visibility = "visible";
+			}, function(){
+				$(this).css("background-color", "#193e8d");
+				$("#arrow").css("background-color", "#193e8d");
+				$(this).css("border-color", "#193e8d");
+			document.getElementById("backcombo").style.visibility = "hidden";
+			});
+			});
+		
+		script.
+			$("#cmn-toggle-1").click(function(){
+				if(document.getElementById('cmn-toggle-1').checked){
+				//document.getElementById("alphabetical").style.visibility = "hidden";
+				//document.getElementById("analytics").style.visibility = "visible";
+					$("#alphabetical").fadeOut(500);
+					$("#analytics").delay(500).fadeIn(500);
+
+				}
+				else{
+					$("#analytics").fadeOut(500);
+
+					$("#alphabetical").delay(500).fadeIn(500);
+				
+				
+				}
+			
+			});
+		script.
+			var i;
+			var numberOfStudents = 25;
+			for(i=0; i<numberOfStudents; i++)
+			{
+				$("#alphabetical").append('<div class="container"></div>');
+			}
+			$(".container").append('<a href="http://www.w3schools.com" class="link"></a>');
+			$(".link").append('<p class="button blue"></p>');
+			$(".button").append('<div class="status"><div class="instatus"></div></div>');
+			$(".button").append('<img id="profile" src="/ProfilePic.jpg">');
+			$(".button").append('<h5>Akshat <br>Gokhale</h5>');
+			var numberOfStudents = 25;
+			for(i=0; i<numberOfStudents; i++)
+			{
+				$("#analytics").append('<div class="container second"></div>');
+			}
+			$(".container.second").append('<a href="http://www.w3schools.com" class="link second"></a>');
+			$(".link.second").append('<p class="buttonSecond blue "></p>');
+			//$(".button").append('<div class="status"><div class="instatus"></div></div>');
+			$(".buttonSecond").append('<img id="profile" src="/ ProfilePic.jpg">');
+			$(".buttonSecond").append('<h5>Akshat <br>Gokhale</h5>');

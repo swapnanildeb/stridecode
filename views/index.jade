@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	form#formAddUser(name="teach",method="post",action="/teacher")
+		button#btnSubmit(type="submit") Register as Teacher
+	br
+	form#formAddUser(name="learn",method="post",action="/student")
+		button#btnSubmit(type="submit") Register as Student
+	br
+	form#formlogin(name="login",method="post",action="/login")
+		button#btnSubmit(type="submit") login
+		

@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    meta(content='text/html; charset=utf-8', http-equiv='Content-Type')
+    title Stride Code
+    link(href='http://fonts.googleapis.com/css?family=Lato:100,300,500', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Exo:100', rel='stylesheet', type='text/css')
+    link(href='/Styles/style_remover.css', rel='stylesheet', type='text/css')
+    link(href='/Styles/index_style.css', rel='stylesheet', type='text/css')
+    link(rel='icon', href='/images/stride.ico', type='image/x-icon')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script.
+      $(document).ready(function(){
+      $('#encompass').fadeIn('1000');
+      });
+  body
+    #encompass.hidden
+      #header
+        ul#nav
+          li(style='color:#ABD6CB')
+            a(href='/') Home
+          li
+            a(href='/products') Product
+          li
+            a(href='/about') About Us
+          li
+            a(href='/contact') Contact Us
+        form#login(method = "post", action='/login')
+          input.input(type='text', name='email', value='Email')
+          input.input(type='password', name='password', value='Password')
+          input#button(type='submit', name='Submit', value='Log In')
+      #container
+        #centered
+          img#title(src='/images/Stride right font.png')
+          #descript
+            | Sign up for Stride. We make computer
+            | science classrooms more functional by allowing teachers
+            | to connect with students in real time to improve their
+            | coding skills.
+          a(href='/products')
+            #more Learn More
+          a(href='/signuptype')
+            #signupbutton Sign Up
+          a(href='http://www.twitter.com/stridecode')
+            img#twitter(src='/images/twitter_white_logo.png', alt='Twitter')
+          a(href='http://www.facebook.com/stridecode')
+            img#facebook(src='/images/facebook_logo.png', alt='Facebook')

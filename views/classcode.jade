@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(content='text/html; charset=utf-8', http-equiv='Content-Type')
+    title Class Code
+    link(href='http://fonts.googleapis.com/css?family=Lato:100,300,500', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Exo:100', rel='stylesheet', type='text/css')
+    link(href='/Styles/style_remover.css', rel='stylesheet', type='text/css')
+    link(href='/Styles/index_style.css', rel='stylesheet', type='text/css')
+    link(rel='icon', href='/iconmages/stride.ico', type='image/x-icon')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script.
+      $(document).ready(function(){
+      $('#encompass').fadeIn('1000');
+      });
+  body
+    #encompass.hidden
+      #header
+        ul#nav
+          li
+            a(href='/index') Home
+          li
+            a(href='/products') Product
+          li
+            a(href='/about') About Us
+          li
+            a(href='/contact') Contact Us
+        form#login(method = "post", action='/login')
+          input.input(type='text', name='email', value='Email')
+          input.input(type='password', name='password', value='Password')
+          input#button(type='submit', name='Submit', value='Log In')
+      #container
+        #classsignuptitle Please enter a class code
+        form#signup(method= "post", action='/joinclass')
+          table
+            tr
+              td
+                input#codeinput(type='text', name='classcode')
+            tr
+              td
+                input#signupformbutton(type='submit', name='submit', value='Submit')

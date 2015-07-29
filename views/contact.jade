@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    meta(content='text/html; charset=utf-8', http-equiv='Content-Type')
+    title Products
+    link(href='http://fonts.googleapis.com/css?family=Lato:100,300,500', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Exo:100', rel='stylesheet', type='text/css')
+    link(href='/Styles/style_remover.css', rel='stylesheet', type='text/css')
+    link(href='/Styles/index_style.css', rel='stylesheet', type='text/css')
+    link(rel='icon', href='/images/stride.ico', type='image/x-icon')
+    style.
+      @font-face{
+      font-family: Exo;
+      src:url('Fonts/Exo/Exo-ExtraLight.otf');
+      }
+  body
+    #encompass
+      #header
+        ul#nav
+          li
+            a(href='/index') Home
+          li
+            a(href='/products') Product
+          li
+            a(href='/about') About Us
+          li(style='color:#ABD6CB')
+            a(href='/contact') Contact Us
+        form#login(method = "post", action='/login')
+          input.input(type='text', name='email', value='Email')
+          input.input(type='password', name='password', value='Password')
+          input#button(type='submit', name='Submit', value='Log In')
+      #container
+        #contacttitle Questions? Message Us
+        form
+          table#contact
+            tr
+              td
+                .inputtitle Name:
+            tr
+              td
+                input#input(type='text', name='name')
+            tr
+              td
+                .inputtitle Email:
+            tr
+              td
+                input#input(type='email', name='name')
+            tr
+              td
+                .inputtitle Message:
+            tr
+              td
+                input#emailinput(type='text', name='name')
+            tr
+              td
+                input#emailformbutton(type='submit', name='submit')

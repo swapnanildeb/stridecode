@@ -1,0 +1,101 @@
+doctype html
+html
+  head
+    meta(content='text/html; charset=utf-8', http-equiv='Content-Type')
+    title Products
+    link(href='http://fonts.googleapis.com/css?family=Lato:100,300,500', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Exo:100', rel='stylesheet', type='text/css')
+    link(href='/Styles/style_remover.css', rel='stylesheet', type='text/css')
+    link(href='/Styles/index_style.css', rel='stylesheet', type='text/css')
+    link(rel='icon', href='Images/stride.ico', type='image/x-icon')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    style.
+      @font-face{
+      font-family: Exo;
+      src:url('Fonts/Exo/Exo-ExtraLight.otf');
+      }
+    script.
+      $(document).ready(function(){
+      $('#product1').fadeIn("1000");
+      $('#product2').delay("500").fadeIn("1000");
+      $('#product3').delay("1000").fadeIn("1000");
+      $('#tospecs').delay('1500').fadeIn("1000");
+      });
+      function toSpec(){
+      $('#product1').fadeOut("1000");
+      $('#product2').fadeOut("1000");
+      $('#product3').fadeOut("1000");
+      $('#tospecs').fadeOut("1000");
+      $('#specs').delay('500').fadeIn("1000");
+      }
+      function fromSpec(){
+      $('#specs').fadeOut("1000");
+      $('#product1').delay("500").fadeIn("1000");
+      $('#product2').delay("500").fadeIn("1000");
+      $('#product3').delay("500").fadeIn("1000");
+      $('#tospecs').delay("500").fadeIn("1000");
+      }
+  body
+    #encompass
+      #header
+        ul#nav
+          li
+            a(href='/') Home
+          li(style='color:#ABD6CB;')
+            a(href='/products') Product
+          li
+            a(href='/about') About Us
+          li
+            a(href='/contact') Contact Us
+        form#login(method = "post", action='/login')
+          input.input(type='text', name='email', value='Email')
+          input.input(type='password', name='password', value='Password')
+          input#button(type='submit', name='Submit', value='Log In')
+      #container
+        .slide
+          #product1.productinfo.hidden
+            .dummyimage
+            h3 Learn
+            .productdescript Answer student questions right from your computer.
+          #product2.productinfo.hidden
+            .dummyimage
+            h3 Code
+            .productdescript Comment on and edit student codes in real time.
+          #product3.productinfo.hidden
+            .dummyimage
+            h3 Create
+            .productdescript Watch your student improve and create new programs.
+          #tospecs.hidden(onclick='toSpec()') See Specs
+        #specs.slide.hidden(style='margin-bottom:100px;')
+          .speccol
+            ul
+              li.ready.right
+                h4 Real Time Collaboration
+                .spectextleft Interact with your students directly on the code
+                #dummyicon
+              li.ready.right
+                h4 Syntax Highlighting
+                .spectextleft Keep track of what you type as you are coding
+                #dummyicon
+              li.ready.right
+                h4 Compiling and Debugging
+                .spectextleft Run your code and test the projects that you create
+                #dummyicon
+          #center
+            h1 Features
+            img#specstride(src='/Images/stride_screenshot.jpg', alt='stride')
+            #fromspecs(onclick='fromSpec()') Return
+          .speccol
+            ul
+              li.ready
+                h4 Multiple Coding Languages
+                #dummyicon
+                .spectext Teach any language you'd like on our platform
+              li.ready
+                h4 Code Demonstration
+                #dummyicon
+                .spectext Teach and show students code from your laptop
+              li.ready
+                h4 Cloud-based Storage
+                #dummyicon
+                .spectext Work on and keep multiple projects at once

@@ -1,0 +1,176 @@
+doctype html
+html
+  head
+    - var firstname = first
+    - var lastname = last
+    - var classt = classcode
+    meta(content='text/html; charset=utf-8', http-equiv='Content-Type')
+    title Teacher Classes
+    link(href='/Styles/style_remover.css', rel='stylesheet', type='text/css')
+    link(href='/Styles/body_style.css', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lato:300', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Exo:100', rel='stylesheet', type='text/css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+  body
+    #encompass
+      #fixed
+        #top
+          h1#black STR_
+          h1#blue IDE
+          .profileInfo
+            img.loginPic(src='/images/stride_screenshot.jpg')
+            h2.loginName
+              | #{firstname}
+              br
+              | #{lastname}
+        #toolbar
+          h2#classes Classes
+          h2#viewAssignment.toggleLabel
+            | View
+            br
+            | Assignments
+          .switch
+            input#cmn-toggle-1.cmn-toggle.cmn-toggle-round(type='checkbox')
+            label(for='cmn-toggle-1')
+          h2#viewClass.toggleLabel
+            | View
+            br
+            | Class
+        #nav.tabs
+          //
+            <div id="create">
+            <div id="createtitle">Create a class</div>
+            <form>
+            <input type="text" name="class" id="input" value="Enter a class name">
+            <input type="text" name="code" id="input" value="Make a class code">
+            </form>
+            </div>
+          h6#classCode Class Code: #{classt}
+          ul.tab-links
+            li
+              a.tab.current(href='#Intro_to_Comp_Sci')
+                p.tab.current Intro to Comp Sci
+                .triangle-right.triangle
+          a#newClass.newClassClass(href='#newClassForm')
+            p.tab(style='font-weight:bold') Add Class
+            .triangle-bottom.triangle
+          form#newClassForm
+            .form
+              h2#formHead.tab Class Name:
+              input.textInput(type='text', name='className')
+              input.submitInput.tab(type='submit', value='Submit', href='#addedClass')
+      #content
+        #assignmentsPage
+          ul#Intro_to_Comp_Sci.page.first
+            li
+              a#openForm.assign
+                img#plus(src='/images/Plus.svg', alt='Add New')
+            li
+              a.assign.assignNot
+                h3.contents BuzzFizz
+                h4.contents Jan. 20, 2015
+                p.contents
+                  | Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz"
+                .thermometer
+        #classPage
+        #addedClass.page
+          h5.congrats
+            | CONGRATULATIONS
+          p#registered
+            | You've just registered for a new virtual classroom.
+            br
+            | 					Check your e-mail and follow the steps listed in order to validate your classroom.
+    script.
+      $("#cmn-toggle-1").click(function(){
+      if(document.getElementById('cmn-toggle-1').checked){
+      //document.getElementById("alphabetical").style.visibility = "hidden";
+      //document.getElementById("analytics").style.visibility = "visible";
+      $("#assignmentsPage").fadeOut(500);
+      $("#classPage").delay(500).fadeIn(500);
+      }
+      else{
+      $("#classPage").fadeOut(500);
+      $("#assignmentsPage").delay(500).fadeIn(500);
+      }
+      });
+    script.
+      //document.getElementsByClassName("triangle-right").style.visibility = "hidden";
+      $(".triangle-right").fadeOut(1);
+      $(".triangle-bottom").fadeOut(1);
+      $(".current").children(".triangle-right").fadeIn(1);
+      $(".page").fadeOut(1);
+      $(".first").fadeIn(1);
+      $("#newClassForm").slideUp(1);
+      $("#classPage").fadeOut(1);
+    script.
+      $(document).ready(function(){
+      $("a, .submitInput").on('click',function(e){
+      $(".current").children(".triangle").hide();
+      $(".current").removeClass("current");
+      $(this).addClass("current");
+      $(this).children("p").addClass("current");
+      $(this).children(".triangle").show();
+      $(this).parent('li').addClass('active').siblings().removeClass('active');
+      if($(this).hasClass("tab")){
+      var currentAttrValue = $(this).attr('href');
+      $(currentAttrValue).delay(500).fadeIn(500);
+      $(currentAttrValue).siblings("ul").fadeOut(500);
+      $("#newAssign").fadeOut(500).fadeIn(500);
+      $("#newClassForm").slideUp();
+      e.preventDefault();
+      }
+      else{
+      $("#newClassForm").slideDown();
+      $("#newClassForm").delay(2000).focus();
+      }
+      if(!($(this).hasClass("submitInput")) &&!($(this).hasClass("newClassClass")))
+      {
+      $("#addedClass").fadeOut(500);
+      }
+      });
+      });
+    script.
+      var i;
+      var numberOfStudents = 25;
+      for(i=0; i<numberOfStudents; i++)
+      {
+      $("#classPage").append('<div class="container"></div>');
+      }
+      $(".container").append('<a href="http://www.w3schools.com" class="link"></a>');
+      $(".link").append('<p class="button blue"></p>');
+      $(".button").append('<div class="status"><div class="instatus"></div></div>');
+      $(".button").append('<img id="profile" src="ProfilePic.jpg">');
+      $(".button").append('<h5 class="studentName">Akshat <br>Gokhale</h5>');
+    script.
+      $( "p.tab" ).hover(
+      function() {
+      $( this ).siblings(".triangle-right").css("border-left-color","#D3D3D3");
+      $( this ).siblings(".triangle-bottom").css("border-top-color","#D3D3D3");
+      /*
+      if($( this ).hasClass( "current" )){
+      $( this ).css("background-color","#208ac7");
+      $( this ).css("color","#ffffff");
+      }
+      else{
+      $( this ).css("background-color","#D3D3D3");
+      $( this ).css("cursor","pointer");
+      }
+      */
+      }, function() {
+      //if($( this ).hasClass( "current" )){
+      $( this ).siblings(".triangle-right").css("border-left-color","#208ac7");
+      $( this ).siblings(".triangle-bottom").css("border-top-color","#208ac7");
+      //}
+      /*
+      else{
+      $( this ).siblings(".triangle-right").css("border-left-color","#D3D3D3");
+      }
+      */
+      });
+    script.
+      $(document).ready(function(){
+      $("#openForm").click(function(){
+      $(this).css("background-color","red");
+      });
+      });

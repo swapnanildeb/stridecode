@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    meta(content='text/html; charset=utf-8', http-equiv='Content-Type')
+    title About Us
+    link(href='http://fonts.googleapis.com/css?family=Lato:100,300,500', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Exo:100', rel='stylesheet', type='text/css')
+    link(href='/Styles/style_remover.css', rel='stylesheet', type='text/css')
+    link(href='/Styles/index_style.css', rel='stylesheet', type='text/css')
+    link(rel='icon', href='images/stride.ico', type='image/x-icon')
+    style.
+      @font-face{
+      font-family: Exo;
+      src:url('Fonts/Exo/Exo-ExtraLight.otf');
+      }
+  body
+    #encompass
+      #header
+        ul#nav
+          li
+            a(href='/') Home
+          li
+            a(href='/products') Product
+          li(style='color:#ABD6CB')
+            a(href='/about') About Us
+          li
+            a(href='/contact') Contact Us
+        form#login(method = "post", action='/login')
+          input.input(type='text', name='email', value='Email')
+          input.input(type='password', name='password', value='Password')
+          input#button(type='submit', name='Submit', value='Log In')
+      #container
+        .slide
+          h1 We couldn't connect with our teachers...
+        .slide
+          h1 So we decided to create Stride...
+        .slide
+          h1 In hopes of building a brighter future...
+        .slide
+          h1 We are:
